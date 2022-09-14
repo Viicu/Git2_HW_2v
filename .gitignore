@@ -1,3 +1,4 @@
 fileToIgnore.txt
 anotherFileToIgnore.txt
-
+/superSecretSecrets/*
+/superSecretSecrets
