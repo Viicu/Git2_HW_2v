@@ -4,4 +4,5 @@ Class Program
 {
     //random lines of code that do something
     //spoted some error and resolved it easily, then pushed the change to remote repo without commiting it once more
+    
 }
