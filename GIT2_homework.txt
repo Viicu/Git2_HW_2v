@@ -1,0 +1,73 @@
+----------1 a----------
+
+To add a modified file to the remote repository we do the following:
+add the file to the staging area using the command:
+git add .
+then commit the change:
+git commit -m "file modified"
+Once the commit is done, push the changes using the command:
+git push origin master (or the branch name in which we work)
+
+Done, the change is pushed to the remote repository
+
+----------1 b----------
+
+to change a commit without registering a new commit, we do the following
+we use the command on the local repository:
+git reset ~1
+this will undo the last commit we made
+then we push this modification to the remote repo using the command:
+git push origin master -f
+
+Now we have modified the history of the remote repo withot registering unwanted commits
+
+----------1 c----------
+
+In case we have any files that we would like to keep only on the local repository and not on the remote one, we can type the file name in the .gitignore file
+Any file mentioned in the .gitignore will be completely ignored by git
+In case we do not have the .gitignore file in our repository, we can create it using the command:
+touch .gitignore
+we add the file to the staging area using the command
+git add .gitignore
+we commit the change with the command:
+git commit -m "added the .gitignore file"
+and now we can write any name of file we would like to get ignored
+
+----------1 d----------
+
+We can unmake any change performed using the git reset command
+In case we made a mistake which was commited, we ca use the command
+git reset ~1
+and the folder status will be modified to the last commit we had
+
+----------2----------
+
+To start working on a remote repository as a new joiner, I would have to make sure I have access to the online project and clone the projct on my local machine.
+
+Go to the Github repository, and ge the repository http link (let's call it: https://github.com/MyRepository).
+Choose the File Explorer folder where the clone of the online repository be, and open a GIT bash there and perform the command:
+git clone https://github.com/MyRepository 
+(we can rename the folder by adding "<New_Name_We_Want>" at the end of the command)
+then press enter and we get a clone (copy) of the online repository on our machine.
+
+----------3----------
+
+Since I have already cloned the repository on the local device, I need to make sure I am connected to the "DEV" branch and not the master/main branch. After this, I need to create my own brench and perform my duties there.
+
+I can change the location of the head by using the command:
+git checkout DEV
+Then, we can create the branch and switch to it by using the command:
+git checkout -b MyDutie
+Further we continue our work
+
+----------4----------
+
+Since I am located on a separate branch, I need to switch to the DEV branch, and clone the copy version of the program.
+We continue working on fixing the problem, and once it is resolved, we send it for PR.
+
+we switch branches using the command:
+git checkout DEV
+create the new branch to work on the hotfix
+git checkout -b hotfix
+gix the issue and announce the responsible person for PR
+
